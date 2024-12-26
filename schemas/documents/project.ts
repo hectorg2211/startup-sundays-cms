@@ -22,6 +22,15 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'status',
+      title: 'Status',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+      options: {
+        list: ['In progress', 'Completed', 'Cancelled'],
+      },
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'text',
@@ -50,6 +59,13 @@ export default defineType({
       name: 'doubleBlock',
       title: 'Double block',
       type: 'doubleBlock',
+    }),
+    defineField({
+      name: 'approvedRegistrations',
+      title: 'Approved registrations',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'registration'}]}],
+      // readOnly: true,
     }),
   ],
   preview: {
