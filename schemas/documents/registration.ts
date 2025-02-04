@@ -1,11 +1,11 @@
 import {defineField, defineType} from 'sanity'
-import {UserIcon} from '@sanity/icons'
+import {AddDocumentIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'registration',
   title: 'Registrations',
   type: 'document',
-  icon: UserIcon,
+  icon: AddDocumentIcon,
   fields: [
     defineField({
       name: 'name',
@@ -49,6 +49,19 @@ export default defineType({
       title: 'Approve registration',
       type: 'boolean',
       initialValue: false,
+    }),
+    defineField({
+      name: 'registrationId',
+      title: 'Registration ID',
+      type: 'string',
+      readOnly: true,
+    }),
+    defineField({
+      name: 'user',
+      title: 'User',
+      type: 'reference',
+      to: [{type: 'user'}],
+      readOnly: true,
     }),
   ],
   preview: {
