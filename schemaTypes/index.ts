@@ -8,6 +8,7 @@ import flexTextItems from '../schemas/objects/flexTextItems'
 import fullWidthContent from '../schemas/objects/fullWidthContent'
 import longImage from '../schemas/objects/longImage'
 import pageHeading from '../schemas/objects/pageHeading'
+import richText from '../schemas/objects/richText'
 import textItem from '../schemas/objects/textItem'
 import titleAndDescription from '../schemas/objects/titleAndDescription'
 
@@ -23,6 +24,7 @@ const objects = [
   textItem,
   flexTextItems,
   descriptionWithIcons,
+  richText,
 ]
 
 export const schemaTypes = [...documents, ...objects]
