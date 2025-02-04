@@ -1,6 +1,7 @@
 import about from '../schemas/documents/about'
 import home from '../schemas/documents/home'
 import project from '../schemas/documents/project'
+import registration from '../schemas/documents/registration'
 import descriptionWithIcons from '../schemas/objects/descriptionWithIcons'
 import doubleBlock from '../schemas/objects/doubleBlock'
 import flexItemsWithDescription from '../schemas/objects/flexItemsWithDescription'
@@ -12,7 +13,7 @@ import richText from '../schemas/objects/richText'
 import textItem from '../schemas/objects/textItem'
 import titleAndDescription from '../schemas/objects/titleAndDescription'
 
-const documents = [home, project, about]
+const documents = [home, project, about, registration]
 
 const objects = [
   titleAndDescription,
