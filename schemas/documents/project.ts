@@ -15,6 +15,10 @@ export default defineType({
       name: 'registration',
       title: 'Registration',
     },
+    {
+      name: 'team',
+      title: 'Team',
+    },
   ],
   fields: [
     defineField({
@@ -97,6 +101,12 @@ export default defineType({
       title: 'Registration title',
       type: 'text',
       group: 'registration',
+    }),
+    defineField({
+      name: 'teamDescription',
+      title: 'Team description',
+      type: 'text',
+      group: 'team',
     }),
   ],
   preview: {
