@@ -6,11 +6,22 @@ export default defineType({
   title: 'Projects',
   type: 'document',
   icon: BoltIcon,
+  groups: [
+    {
+      name: 'project',
+      title: 'Project',
+    },
+    {
+      name: 'registration',
+      title: 'Registration',
+    },
+  ],
   fields: [
     defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
+      group: 'project',
     }),
     defineField({
       name: 'slug',
@@ -20,6 +31,7 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+      group: 'project',
     }),
     defineField({
       name: 'status',
@@ -29,11 +41,13 @@ export default defineType({
       options: {
         list: ['In progress', 'Completed', 'Cancelled'],
       },
+      group: 'project',
     }),
     defineField({
       name: 'description',
       title: 'Description',
       type: 'text',
+      group: 'project',
     }),
     defineField({
       name: 'mainImage',
@@ -42,28 +56,33 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      group: 'project',
     }),
     defineField({
       name: 'media',
       title: 'Media',
       type: 'array',
       of: [{type: 'file'}],
+      group: 'project',
     }),
     defineField({
       name: 'additionalDescriptions',
       title: 'Additional descriptions',
       type: 'array',
       of: [{type: 'titleAndDescription'}],
+      group: 'project',
     }),
     defineField({
       name: 'availablePositions',
       title: 'Available positions',
       type: 'number',
+      group: 'project',
     }),
     defineField({
       name: 'doubleBlock',
       title: 'Double block',
       type: 'doubleBlock',
+      group: 'project',
     }),
     defineField({
       name: 'approvedRegistrations',
@@ -71,6 +90,13 @@ export default defineType({
       type: 'array',
       of: [{type: 'reference', to: [{type: 'registration'}]}],
       readOnly: true,
+      group: 'project',
+    }),
+    defineField({
+      name: 'registrationTitle',
+      title: 'Registration title',
+      type: 'text',
+      group: 'registration',
     }),
   ],
   preview: {
