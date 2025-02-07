@@ -8,6 +8,7 @@ import doubleBlock from '../schemas/objects/doubleBlock'
 import flexItemsWithDescription from '../schemas/objects/flexItemsWithDescription'
 import flexTextItems from '../schemas/objects/flexTextItems'
 import fullWidthContent from '../schemas/objects/fullWidthContent'
+import iconLink from '../schemas/objects/iconLink'
 import longImage from '../schemas/objects/longImage'
 import pageHeading from '../schemas/objects/pageHeading'
 import richText from '../schemas/objects/richText'
@@ -27,6 +28,7 @@ const objects = [
   flexTextItems,
   descriptionWithIcons,
   richText,
+  iconLink,
 ]
 
 export const schemaTypes = [...documents, ...objects]

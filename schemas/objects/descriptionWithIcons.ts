@@ -16,7 +16,7 @@ export default defineType({
       name: 'icons',
       title: 'Icons',
       type: 'array',
-      of: [{type: 'image'}],
+      of: [{type: 'iconLink'}],
     }),
   ],
   preview: {
