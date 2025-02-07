@@ -56,6 +56,11 @@ export default defineType({
       of: [{type: 'titleAndDescription'}],
     }),
     defineField({
+      name: 'availablePositions',
+      title: 'Available positions',
+      type: 'number',
+    }),
+    defineField({
       name: 'doubleBlock',
       title: 'Double block',
       type: 'doubleBlock',
@@ -65,7 +70,7 @@ export default defineType({
       title: 'Approved registrations',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'registration'}]}],
-      // readOnly: true,
+      readOnly: true,
     }),
   ],
   preview: {
