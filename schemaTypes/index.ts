@@ -17,8 +17,11 @@ import richText from '../schemas/objects/richText'
 import textItem from '../schemas/objects/textItem'
 import titleAndDescription from '../schemas/objects/titleAndDescription'
 import footer from '../schemas/objects/footer'
+import page from '../schemas/documents/page'
+import seo from '../schemas/objects/seo'
+import settings from '../schemas/documents/settings'
 
-const documents = [home, project, about, registration, user, layout]
+const documents = [home, project, about, registration, user, layout, page, settings]
 
 const objects = [
   titleAndDescription,
@@ -33,6 +36,7 @@ const objects = [
   richText,
   iconLink,
   footer,
+  seo,
 ]
 
 export const schemaTypes = [...documents, ...objects]
